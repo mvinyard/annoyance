@@ -18,7 +18,8 @@ setup(
         "annoyance",
     ],
     install_requires=[
-
+        "annoy>=1.17.0",
+        "anndata>=0.7.8",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
