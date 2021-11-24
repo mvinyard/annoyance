@@ -1,5 +1,4 @@
 # Annoyance
----
 
 [**annoy**](https://github.com/spotify/annoy) for the **an**notation of **ce**ll types. 
 
