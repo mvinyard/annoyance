@@ -1,4 +1,4 @@
-# annoyance
+# ![logo](/docs/images/annoyance.logo.svg)
 
 [**annoy**](https://github.com/spotify/annoy) for the **an**notation of **ce**ll types. 
 
