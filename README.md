@@ -1,11 +1,11 @@
 # ![logo](/docs/images/annoyance.logo.svg)
 
-[**annoy**](https://github.com/spotify/annoy) for the **an**notation of **ce**ll types. 
+### [**annoy**](https://github.com/spotify/annoy) for the **an**notation of **ce**ll types. 
 
-This is a simple API for classifying cell types as annotated in an **`adata.obs`** table. 
 
-## Example usage
+This is a simple API for classifying cell types as annotated in an **`adata.obs`** table. An example notebook may be found [**here**](docs/notebooks/annoyance.example.pbmc3k.ipynb).
 
+### Overview
 ```python
 import annoyance
 import anndata as a
@@ -37,15 +37,15 @@ annoy.save()
 ```
 
 
-## Installation
+### Installation
 
-```python
+```BASH
 pip install annoyance
 ```
 
-### To install the development version
+#### To install the development version
 
-```python
+```BASH
 git clone https://github.com/mvinyard/annoyance.git
 
 cd ./annoyance/
