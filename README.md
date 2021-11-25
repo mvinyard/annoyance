@@ -52,4 +52,4 @@ cd ./annoyance/
 pip install -e .
 ```
 
-This project uses open-source code from [**spotify/annoy**](https://github.com/spotify/annoy). However, this repo is in no way affiliated with [Spotify](https://github.com/spotify). Questions and interests may be directed to [**Michael Vinyard**](https://github.com/mvinyard) at: [mvinyard@broadinstitute.org](mailto:mvinyard@broadinstitute.org). 
+This project uses open-source code from [**spotify/annoy**](https://github.com/spotify/annoy). However, **this repo is in no way affiliated with Spotify**. Questions and interests may be directed to [**Michael Vinyard**](https://github.com/mvinyard) at: [mvinyard@broadinstitute.org](mailto:mvinyard@broadinstitute.org). 
