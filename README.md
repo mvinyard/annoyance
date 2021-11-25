@@ -1,9 +1,11 @@
 # ![logo](/docs/images/annoyance.logo.svg)
 
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/annoyance.svg)](https://pypi.python.org/pypi/annoyance/)
+[![PyPI version](https://badge.fury.io/py/annoyance.svg)](https://badge.fury.io/py/annoyance)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 ### [**annoy**](https://github.com/spotify/annoy) for the **an**notation of **ce**ll types. 
-
-
-This is a simple API for classifying cell types as annotated in an **`adata.obs`** table. An example notebook may be found [**here**](docs/notebooks/annoyance.example.pbmc3k.ipynb).
+**Annoyance** is a simple API for classifying cell types as annotated in an **`adata.obs`** table. An example notebook may be found [**here**](docs/notebooks/annoyance.example.pbmc3k.ipynb).
 
 ### Overview
 ```python
