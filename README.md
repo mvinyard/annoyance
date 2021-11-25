@@ -7,19 +7,35 @@ This is a simple API for classifying cell types as annotated in an **`adata.obs`
 ## Example usage
 
 ```python
-import annoyance as oy
+import annoyance
 import anndata as a
 
-# read AnnData
-adata = a.read_h5ad("/path/to/data.h5ad")
+# load data
+adata = a.read_h5ad("../inputs/weinreb2020.h5ad")
 
-# build and run classifier
-oy.build(adata)
-
-adata
-
-...
+# instantiate model
+annoy = annoyance.SpotifyAnnoy()
 ```
+
+**Step 1**. split data on categorical labels
+```python
+annoy.split_data(
+    adata, annot_col="Annotation", labels=["Monocyte", "Neutrophil"], on="X_pca"
+)
+```
+
+**Step 2**. Build and evaluate the predictive model based on the data split
+
+```python
+annoy.prebuild()
+```
+
+**Step 3**. Build the classifier using all of the data then save the `AnnoyIndex`. 
+```python
+annoy.build()
+annoy.save()
+```
+
 
 ## Installation
 
