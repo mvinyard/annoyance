@@ -10,10 +10,10 @@
 ### Overview
 ```python
 import annoyance
-import anndata as a
+from anndata import read_h5ad
 
 # load data
-adata = a.read_h5ad("./data/pbmc3k.processed.h5ad")
+adata = read_h5ad("./data/pbmc3k.processed.h5ad")
 ```
 
 **Step 1**. Instantiate the model and split the data on categorical labels
