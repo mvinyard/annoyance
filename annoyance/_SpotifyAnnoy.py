@@ -206,3 +206,41 @@ class _SpotifyAnnoy:
                 self._ann_path, self._txt_path
             )
         )
+    
+    def load(self, prebuilt_path, n_features, metric="euclidean"):
+        
+        """
+        Parameters:
+        -----------
+        prebuilt_path
+            type: str
+        
+        n_features
+            type: int
+        
+        metric
+            type: str
+            default: "euclidean"
+        
+        Returns:
+        --------
+        Adds the subclass, `self.annoy_idx`
+        
+        Notes:
+        ------
+        `self._n_items` which is also return as a subclass of the annoy_idx corresponds to the number 
+        of cells on which classifier was trained. input index with labels must match when performing 
+        future label prediction. 
+        
+        """
+        
+        self._prebuilt_annoy_idx_path = prebuilt_path
+        self._metric = metric
+        self._n_features = n_features
+        
+        
+        self.annoy_idx = _load_annoy_index(self._prebuilt_annoy_idx_path, self._n_features, self._metric)
+        self._n_trees = self.annoy_idx.get_n_trees() # determined during idx build
+        self._n_items = self.annoy_idx.get_n_items() # 
+        
+        
