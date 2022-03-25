@@ -36,7 +36,7 @@ def _load_annoy_index(path, n_features, metric="euclidean"):
     ------
     """
     
-    annoy_idx = AnnoyIndex(n_features, 'euclidean')
+    annoy_idx = AnnoyIndex(n_features, metric)
     annoy_idx.load(path)
     
     return annoy_idx

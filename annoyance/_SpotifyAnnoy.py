@@ -2,11 +2,7 @@
 # _SpotifyAnnoy.py
 __module_name__ = "_SpotifyAnnoy.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
-__email__ = ", ".join(
-    [
-        "vinyard@g.harvard.edu",
-    ]
-)
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
 
 # import packages #
 # --------------- #
@@ -22,6 +18,7 @@ from ._annoy_functions._load_annoy_index import _load_annoy_index
 
 from ._utility_functions._flexible_multilevel_mkdir import _flexible_multilevel_mkdir
 from ._utility_functions._DataSplit import _DataSplit
+
 
 class _SpotifyAnnoy:
     def __init__(self):
@@ -235,12 +232,11 @@ class _SpotifyAnnoy:
         """
         
         self._prebuilt_annoy_idx_path = prebuilt_path
-        self._metric = metric
         self._n_features = n_features
+        self._metric = metric
         
         
         self.annoy_idx = _load_annoy_index(self._prebuilt_annoy_idx_path, self._n_features, self._metric)
         self._n_trees = self.annoy_idx.get_n_trees() # determined during idx build
         self._n_items = self.annoy_idx.get_n_items() # 
-        
         
