@@ -16,6 +16,8 @@ setup(
     description="annoyance - single-cell AnnData wrapper of Spotify's Annoy library.",
     packages=[
         "annoyance",
+        "annoyance._annoy_functions",
+        "annoyance._utility_functions",
     ],
     install_requires=[
         "annoy>=1.17.0",
