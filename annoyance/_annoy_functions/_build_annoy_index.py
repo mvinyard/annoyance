@@ -1,37 +1,34 @@
-
-# _build_annoy_index.py
 __module_name__ = "_build_annoy_index.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
-__email__ = ", ".join(
-    [
-        "vinyard@g.harvard.edu",
-    ]
-)
+__email__ = ", ".join(["vinyard@g.harvard.edu"])
 
 
-# import packages #
-# --------------- #
+# import packages: ------------------------------------------------------------
 import annoy
 
 
-def _build_annoy_index(x_array, metric, n_trees):
-
+def _build_annoy_idx(
+    x, metric: str = "euclidean", n_trees: int = 10
+) -> annoy.AnnoyIndex:
+    
     """
-    Build an AnnoyIndex using Spotify.annoy.
+    Build a Spotify.annoy kNN index
     
     Parameters:
     -----------
-    x_array
-        input array
+    x
+        input matrix
         type: numpy.ndarray
     
     metric
-        metric passed to annoy. "euclidean" is typical. 
+        distance metric
         type: str
+        default: "euclidean"
     
     n_trees
-        number of trees in the AnnoyIndex.
+        number of trees.
         type: int
+        default: 10
         
     Returns:
     --------
@@ -40,13 +37,13 @@ def _build_annoy_index(x_array, metric, n_trees):
     
     Notes:
     ------
-    (1) Loops through each cell, appending the n_dimensional feature vector to the AnnoyIndex. 
+    (1) Loops through each item. Appends n_dim feature vector to AnnoyIndex.
     """
 
-    annoy_idx = annoy.AnnoyIndex(x_array.shape[1], metric)
+    annoy_idx = annoy.AnnoyIndex(x.shape[1], metric)
 
-    for cell in range(x_array.shape[0]):
-        annoy_idx.add_item(cell, x_array[cell])
+    for i in range(x.shape[0]):
+        annoy_idx.add_item(i, x[i])
 
     annoy_idx.build(n_trees)
 
