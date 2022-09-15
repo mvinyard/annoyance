@@ -2,11 +2,8 @@
 # _DataSplit.py
 __module_name__ = "_DataSplit.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
-__email__ = ", ".join(
-    [
-        "vinyard@g.harvard.edu",
-    ]
-)
+__email__ = ", ".join(["vinyard@g.harvard.edu"])
+
 
 # import packages #
 # --------------- #

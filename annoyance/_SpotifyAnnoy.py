@@ -12,7 +12,7 @@ import os, annoy
 # import local modules #
 # -------------------- #
 from ._annoy_functions._evaluate_annoy import _evaluate_annoy
-from ._annoy_functions._build_annoy_index import _build_annoy_index
+from ._annoy_functions._build_annoy_index import build_annoy_idx
 from ._annoy_functions._predict_on_test_data import _predict_on_test_data
 from ._annoy_functions._load_annoy_index import _load_annoy_index
 

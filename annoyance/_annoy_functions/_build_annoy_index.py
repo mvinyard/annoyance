@@ -8,7 +8,7 @@ __email__ = ", ".join(["vinyard@g.harvard.edu"])
 import annoy
 
 
-def _build_annoy_idx(
+def build_annoy_idx(
     x, metric: str = "euclidean", n_trees: int = 10
 ) -> annoy.AnnoyIndex:
     
