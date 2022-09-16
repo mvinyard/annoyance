@@ -1,5 +1,5 @@
 
-__module_name__ = "_build_annoy_index.py"
+__module_name__ = "_build.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
 __email__ = ", ".join(["vinyard@g.harvard.edu"])
 
@@ -8,7 +8,7 @@ __email__ = ", ".join(["vinyard@g.harvard.edu"])
 import annoy
 
 
-def build_annoy_idx(
+def build(
     x, metric: str = "euclidean", n_trees: int = 10
 ) -> annoy.AnnoyIndex:
     
@@ -39,7 +39,7 @@ def build_annoy_idx(
     Notes:
     ------
     (1) Loops through each item. Appends n_dim feature vector to AnnoyIndex.
-    """
+    """    
 
     annoy_idx = annoy.AnnoyIndex(x.shape[1], metric)
 

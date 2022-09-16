@@ -4,14 +4,14 @@ __author__ = ", ".join(["Michael E. Vinyard"])
 __email__ = ", ".join(["vinyard@g.harvard.edu",])
 
 
-# -----------------------------------------------------------------------------
-from ._SpotifyAnnoy import _SpotifyAnnoy as annoy
+# VERSION: --------------------------------------------------------------------
+__version__ = "v0.0.13"
 
 
-# -----------------------------------------------------------------------------
-from ._annoy_functions._build_annoy_index import build_annoy_idx
+# Core module and functions: --------------------------------------------------
+from ._core._SpotifyAnnoy import SpotifyAnnoy as kNN
+from ._core._idx_funcs import *
 
 
-# -----------------------------------------------------------------------------
-from ._utility_functions._use_X import use_X
-from ._utility_functions._create_label_mask import create_label_mask
+# Data formatting and other interactive modules: ------------------------------
+from ._interactive_funcs import *
