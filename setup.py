@@ -6,7 +6,7 @@ import sys
 
 setuptools.setup(
     name="annoyance",
-    version="0.0.15",
+    version="0.0.16",
     python_requires=">3.7.0",
     author="Michael E. Vinyard - Harvard University - Massachussetts General Hospital - Broad Institute of MIT and Harvard",
     author_email="mvinyard@broadinstitute.org",
