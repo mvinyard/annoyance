@@ -6,7 +6,6 @@ __email__ = ", ".join(["vinyard@g.harvard.edu"])
 
 # import packages: -------------------------------------------------------
 import licorice_font
-import torch
 import numpy
 
 
@@ -39,7 +38,7 @@ def _print_help_message(adata, use_key):
 def use_X(adata, use_key="X"):
 
     """
-    Return data from AnnData as Tensor.
+    Return data from AnnData as numpy array (if not already).
 
     Parameters:
     -----------
@@ -56,7 +55,7 @@ def use_X(adata, use_key="X"):
     --------
     X
         Formatted data matrix.
-        type: torch.Tensor
+        type: np.ndarray
     """
 
     if use_key == "X":
