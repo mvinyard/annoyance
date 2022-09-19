@@ -18,6 +18,8 @@ setuptools.setup(
     install_requires=[
         "annoy>=1.17.0",
         "anndata>=0.8",
+        "pandas>=1.4.4",
+        "pydk>=0.0.54",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
