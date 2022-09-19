@@ -2,6 +2,7 @@
 
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/annoyance.svg)](https://pypi.python.org/pypi/annoyance/)
 [![PyPI version](https://badge.fury.io/py/annoyance.svg)](https://badge.fury.io/py/annoyance)
+[![Documentation Status](https://readthedocs.org/projects/annoyance/badge/?version=latest)](https://annoyance.readthedocs.io/en/latest/?badge=latest)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ### [**annoy**](https://github.com/spotify/annoy) for the **an**notation of **ce**ll types. 
