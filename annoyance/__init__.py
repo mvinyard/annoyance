@@ -1,6 +1,17 @@
 
-__module_name__ = "_format_string_printing_font.py"
+__module_name__ = "__init__.py"
 __author__ = ", ".join(["Michael E. Vinyard"])
-__email__ = ", ".join(["vinyard@g.harvard.edu"])
+__email__ = ", ".join(["vinyard@g.harvard.edu",])
 
-from ._SpotifyAnnoy import _SpotifyAnnoy as annoy
+
+# VERSION: --------------------------------------------------------------------
+__version__ = "v0.0.13"
+
+
+# Core module and functions: --------------------------------------------------
+from ._core._SpotifyAnnoy import SpotifyAnnoy as kNN
+from ._core._idx_funcs import *
+
+
+# Data formatting and other interactive modules: ------------------------------
+from ._interactive_funcs import *
