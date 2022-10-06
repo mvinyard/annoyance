@@ -7,9 +7,11 @@ import time
 def _count_values(col: pd.Series) -> dict:
     return col.value_counts().to_dict()
 
+def _max_count(col: pd.Series) -> str:
+    return col.value_counts().idxmax()
 
 def count_obs_neighbors(
-    adata: anndata.AnnData, query_result: np.ndarray, obs_key: str
+    adata: anndata.AnnData, query_result: np.ndarray, obs_key: str, max_only=False,
 ) -> (list([dict, dict, ...]), float):
 
     """
@@ -49,11 +51,17 @@ def count_obs_neighbors(
     nn_adata = adata[query_result.flatten()]
     # nn_idx = np.repeat(range(len(query_result)), 20)
     query_df = pd.DataFrame(
-        nn_adata.obs[obs_key].to_numpy().reshape(query_result.T.shape)
+        nn_adata.obs[obs_key].to_numpy().reshape(query_result.shape).T
     )
-    value_counts = [
-        _count_values(query_df[i]) for i in query_df.columns
-    ]  # list of dicts
+    
+    if max_only:
+        value_counts = [
+            _max_count(query_df[i]) for i in query_df.columns
+        ] # list of values
+    else:
+        value_counts = [
+            _count_values(query_df[i]) for i in query_df.columns
+        ]  # list of dicts
 
     query_time = time.time() - query_time_start
 

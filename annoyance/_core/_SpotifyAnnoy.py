@@ -166,7 +166,7 @@ class SpotifyAnnoy:
         if return_query:
             return self._nn_query
 
-    def count(self, obs_key: str) -> (list([dict, dict, ...]), float):
+    def count(self, obs_key: str, max_only: bool = False) -> (list([dict, dict, ...]), float):
         
         """
         Queried kNN returns index of nearest neighbors. Query the adata.obs
@@ -206,7 +206,7 @@ class SpotifyAnnoy:
         """
         
         self._query_value_counts, self._count_time = count_obs_neighbors(
-            self._adata, self._nn_query, obs_key
+            self._adata, self._nn_query, obs_key, max_only,
         )
         
     def load(
